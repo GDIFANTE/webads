@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .container{
+                display: flex;
+            }
+            span{color: green}
+            .BoxA{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: all 1s ease-in 0s;
+            }
+            .BoxA:hover{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                border: 1px solid black;
+                flex-shrink: 0;
+                animation: rotacao 3s linear 
+                0s infinite ;
+            }
+            @keyframes rotacao{
+                0%{
+                    transform: rotate(0deg);
+                    top: 0px;
+                }
+                100%{
+                    transform: rotate(360deg);
+                    top: 450px;
+                    border-radius: 150%;
+
+                }
+            }
+            #box1{background-color: gray;}
+            #box2{background-color: green;}
+            #box3{background-color: pink;}
+            #box4{background-color: yellow;}
+            #box5{background-color: azure;}
+        </style>
+    </head>
+    <body>
+        <h2>Transições CSS</h2>
+        <p>Servem para definir uma temporização para mudanças
+             que podem ocorrer nos elementos html</p>
+        <code>
+            elemento{
+                transition: <span>propriedade</span> <span>duração</span>
+                <span>função</span>
+                <span>delay;</span>
+            }
+        </code>
+        <div class="container">
+            <div class="BoxA">BoxA</div>
+            <div class="BoxA">BoxA</div>
+            <div class="BoxA">BoxA</div>
+            <div class="BoxA">BoxA</div>
+        </div>
+
+        <h2>Animações CSS</h2>
+            <p>animation: name duration timing-function 
+                delay iteration-count direction fill-mode;</p>
+        <div class="container">
+            <div class="box" id="box1">saboa</div>
+            <div class="box" id="box2">box21</div>
+            <div class="box" id="box3">box31</div>
+            <div class="box" id="box4">box41</div>
+            <div class="box" id="box5">box51</div>
+        </div>
+    </body>
+</html>

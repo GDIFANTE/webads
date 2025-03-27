@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .container{
+                display: grid;
+                height: 100svh;
+                grid-template-areas: 
+                "header header header header"
+                "main   main     .   sidebar"
+                "footer footer footer footer"
+                ;
+                grid-template-rows: 1fr 5fr 1fr 1fr;
+            }
+            .box{
+                border: 1px solid;
+            }
+            #box1{
+                grid-area: header;
+                background-color: orange;
+            }
+            #box2{
+                grid-area: main;
+                background-color: aqua;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #box3{
+                grid-area: sidebar;
+                background-color: coral;
+            }
+            #box4{
+                grid-area: footer;
+                background-color: green;
+            }
+            .postagem{
+                width: 30px;
+                height: 60px;
+                background-color: brown;
+                margin: 10px;
+            }
+            @media (max-width: 500px) {
+                .container{
+                    display: grid;
+                    height: 100svh;
+                    grid-template-areas: 
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer"
+                    ;
+                    grid-template-rows: 1fr 5fr 1fr 1fr;
+                }
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="box1">box1</div>
+            <div class="box" id="box2">
+                <div class="postagem"></div>
+                <div class="postagem"></div>
+                <div class="postagem"></div>
+                <div class="postagem"></div>
+                <div class="postagem"></div>
+            </div>
+            <div class="box" id="box3">box3</div>
+            <div class="box" id="box4">box4</div>
+            
+
+        </div>
+    </body>
+</html>
