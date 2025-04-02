@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .container{
+                display: grid;
+                height: 100svh;
+                grid-template-areas: 
+                "header header header header header header"
+                "title title title title title title"
+                "main .  texto texto  .   sidebar"
+                "main . foto foto . sidebar"
+                "main . prod prod . sidebar"
+                ". . . . . ."
+                "footer footer footer footer footer footer"
+                ;
+                grid-template-rows: 1fr 1fr 2fr 2fr 1fr 2fr;
+            }
+            .box{
+
+            }
+            #box1{
+                grid-area: header;
+                background-color: white;
+                border: 1px solid;
+                align-content: center;
+                text-align: center;
+                height: 10svh;
+            }
+            #box2{
+                grid-area: title;
+                background-color: white;
+                align-content: center;
+                text-align: center;
+                height: 10svh;
+            }
+            #box3{
+                grid-area: main;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid;
+                border-radius: 15%;
+                align-content: top;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 8svh;
+                height: 52svh;         
+            }
+            #box4{
+                grid-area: texto;
+                align-content: center;
+                text-align: center;
+                width: 90svh;
+            }
+            #box5{
+                grid-area: sidebar;
+                border: 1px solid;
+                border-radius: 15%;
+                align-content: center;
+                text-align: center;
+                flex-wrap: wrap;
+                width: 8svh
+            }
+            #box6{
+                grid-area: foto;
+                align-content: center;
+                background-color: green;
+                text-align: center;
+                width: 90svh;
+            }
+            #box7{
+                grid-area: prod;
+                border: 1px solid;
+                align-content: center;
+                border-radius: 15%;
+                text-align: center;
+                width: 90svh;
+            }
+            #box8{
+                grid-area: footer;
+                border: 1px solid;
+                align-content: center;
+                text-align: center;
+                height: 25svh;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="box1">Banner</div>
+            <div class="box" id="box2">Lorem Title</div>
+            <div class="box" id="box3">Menu <span style="color: rgb(255, 255, 255);">space</span> Home Sobre Contatos</div>
+            <div class="box" id="box4">Lorem lorem Lorem lorem Lorem lorem Lorem lorem
+                Lorem lorem Lorem lorem Lorem lorem Lorem lorem Lorem lorem
+                Lorem lorem Lorem lorem Lorem lorem Lorem lorem Lorem lorem Lorem lorem
+                Lorem lorem Lorem lorem Lorem lorem Lorem lorem Lorem lorem
+                Lorem lorem Lorem lorem Lorem lorem Lorem lorem
+            </div>
+            <div class="box" id="box5">box5</div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7">Product List</div>
+            <div class="box" id="box8">Footer Lorem</div>
+            
+
+        </div>
+    </body>
+</html>
