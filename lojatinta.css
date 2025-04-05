@@ -127,12 +127,13 @@
   background-color: #ffcc00;
   padding: 1.5rem 0;
   overflow: hidden;
+  position: relative;
 }
 
 .slider {
   display: flex;
   width: 300%;
-  animation: slide 12s infinite;
+  animation: slide 24s infinite;
 }
 
 .slide {
@@ -143,17 +144,15 @@
   align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
-  transition: opacity 1s ease;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 @keyframes slide {
-  0% { transform: translateX(0%); }
-  33% { transform: translateX(0%); }
-  36% { transform: translateX(-100%); }
-  66% { transform: translateX(-100%); }
-  69% { transform: translateX(-200%); }
-  99% { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
+  0%, 25% { transform: translateX(0%); }
+  30%, 55% { transform: translateX(0%); }
+  60%, 85% { transform: translateX(-100%); }
+  90%, 100% { transform: translateX(-100%); }
 }
 
 .categoria img {
