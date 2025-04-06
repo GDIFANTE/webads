@@ -36,6 +36,18 @@
     font-size: 1.8rem;
     font-weight: bold;
   }
+
+  .logo a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .logo a:hover {
+    text-decoration: none; /* evita sublinhado */
+    cursor: pointer;       /* mãozinha ao passar o mouse */
+  }
+  
   
   nav ul {
     list-style: none;
@@ -153,6 +165,13 @@
     border-radius: 8px;
     margin-bottom: 0.5rem;
   }
+  
+  .categoria a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
   
   /* Rodapé */
   footer {
