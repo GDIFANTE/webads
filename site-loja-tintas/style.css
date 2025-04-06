@@ -12,73 +12,80 @@
     color: #333;
   }
   
-  /* Cabeçalho */
-  header {
-    background-color: #7abbfc;
-    background-image: url(images_index/logobanner.png);
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: left center;   
-    color: white;
-    padding: 1rem 0;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
+/* Cabeçalho */
+header {
+  background-color: #7abbfc;
+  color: white;
+  padding: 1rem 0;
+}
 
-  .logo a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .logo a:hover {
-    text-decoration: none; /* evita sublinhado */
-    cursor: pointer;       /* mãozinha ao passar o mouse */
-  }
-  
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-  .carrinho {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.2s ease;
-  }
-  
-  .carrinho:hover {
-    transform: scale(1.1);
-  }
-  
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.carrinho {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.carrinho:hover {
+  transform: scale(1.1);
+}
+
   
   /* Banner */
   .banner {    
-    height: 400px;
+    width: 100%;
+    height: 200px;
     background-image: url(images_index/logobanner.png);
     background-size: 800px;
     background-repeat: no-repeat;
@@ -89,6 +96,7 @@
   }
   
   .banner-content {
+    width: 99%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
@@ -217,6 +225,108 @@
     66%, 86%  { transform: translateX(-200%); }
     100%      { transform: translateX(0%); }
   }
+
+  /* Barra de pesquisa */
+  .barra-pesquisa-prods {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e6f0ff;
+  }
+  
+  .barra-pesquisa {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .barra-pesquisa input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+  
+  .barra-pesquisa button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    color: #004080;
+  }
+
+    /* Produtos */
+    .produtospai {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    
+    .produtospai h2 {
+      margin-bottom: 2rem;
+    }
+    
+    .produtos-lista {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .produtos {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .produtos:hover {
+      transform: scale(1.03);
+    }
+  
+    .produtos img,
+    .produtos h3 {
+    transition: transform 0.3s ease;
+  }
+  
+    .produtos:hover img,
+    .produtos:hover h3 {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+    
+    .produtos img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    
+    .produtos a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .estrela {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    
+    .estrela.preenchida {
+      color: #f2b600;
+    }
+  
   
   
 
