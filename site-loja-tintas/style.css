@@ -1,3 +1,5 @@
+
+  /* Configurações INDEX */
 * {
     margin: 0;
     padding: 0;
@@ -48,8 +50,7 @@
   }
   
   /* Banner */
-  .banner {
-    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+  .banner {    
     height: 400px;
     display: flex;
     align-items: center;
@@ -111,6 +112,8 @@
   
   .categoria img {
     width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 0.5rem;
   }
@@ -122,45 +125,45 @@
     text-align: center;
     padding: 1rem 0;
   }
-  /* Carrossel de Promoções */
-.promocoes {
-  background-color: #ffcc00;
-  padding: 1.5rem 0;
-  overflow: hidden;
-  position: relative;
-}
 
-.slider {
-  display: flex;
-  width: 300%;
-  animation: slide 24s infinite;
-}
+  /* Maldito Carrossel de Promoções */
+  .carrossel-promocoes {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    width: 300%;
+    animation: slideAnim 12s infinite;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  @keyframes slideAnim {
+    0%, 20%   { transform: translateX(0%); }
+    33%, 53%  { transform: translateX(-100%); }
+    66%, 86%  { transform: translateX(-200%); }
+    100%      { transform: translateX(0%); }
+  }
+  
+  
 
-.slide {
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  backface-visibility: hidden;
-  will-change: transform;
-}
-
-@keyframes slide {
-  0%, 25% { transform: translateX(0%); }
-  30%, 55% { transform: translateX(0%); }
-  60%, 85% { transform: translateX(-100%); }
-  90%, 100% { transform: translateX(-100%); }
-}
-
-.categoria img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
 
   
