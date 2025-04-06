@@ -14,7 +14,11 @@
   
   /* Cabeçalho */
   header {
-    background-color: #004080;
+    background-color: #7abbfc;
+    background-image: url(images_index/logobanner.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;   
     color: white;
     padding: 1rem 0;
   }
@@ -48,10 +52,25 @@
   nav a:hover {
     text-decoration: underline;
   }
+
+  .carrinho {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+  }
+  
+  .carrinho:hover {
+    transform: scale(1.1);
+  }
+  
   
   /* Banner */
   .banner {    
     height: 400px;
+    background-image: url(images_index/logobanner.png);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +127,24 @@
     border-radius: 10px;
     width: 300px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
   }
+
+  .categoria:hover {
+    transform: scale(1.03);
+  }
+
+  .categoria img,
+  .categoria h3 {
+  transition: transform 0.3s ease;
+}
+
+  .categoria:hover img,
+  .categoria:hover h3 {
+  transform: scale(1.05);
+  cursor: pointer;
+}
   
   .categoria img {
     width: 100%;
