@@ -447,4 +447,149 @@ header {
             width: 100%;
           }
         }
+
+        /* Contato */
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f8f8;
+          margin: 0;
+          padding: 2rem;
+        }
+        
+        .contato-container {
+          max-width: 1200px;
+          margin: auto;
+          background-color: white;
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .contato-container h1 {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        
+        .contato-flex {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+        }
+        
+        .formulario, .info-loja {
+          flex: 1;
+          min-width: 280px;
+        }
+        
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+        
+        form label {
+          margin-top: 1rem;
+          font-weight: bold;
+        }
+        
+        form input,
+        form textarea {
+          padding: 0.7rem;
+          margin-top: 0.3rem;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+        }
+        
+        form button {
+          margin-top: 1.5rem;
+          padding: 0.8rem;
+          background-color: #ffcc00;
+          border: none;
+          border-radius: 6px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        form button:hover {
+          background-color: #e6b800;
+        }
+        
+        .info-loja p {
+          margin: 0.5rem 0;
+        }
+        
+        /* Chatbox */
+        .chatbox {
+          margin-top: 3rem;
+          padding: 1.5rem;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+        }
+        
+        .chatbox h2 {
+          margin-bottom: 1rem;
+        }
+        
+        .chat-mensagens {
+          max-height: 200px;
+          overflow-y: auto;
+          margin-bottom: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        
+        .mensagem {
+          padding: 0.6rem 1rem;
+          border-radius: 10px;
+          max-width: 70%;
+        }
+        
+        .mensagem.cliente {
+          background-color: #d1e7dd;
+          align-self: flex-start;
+        }
+        
+        .mensagem.loja {
+          background-color: #bee3f8;
+          align-self: flex-end;
+        }
+        
+        .chat-input {
+          display: flex;
+          gap: 0.5rem;
+        }
+        
+        .chat-input input {
+          flex: 1;
+          padding: 0.6rem;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+        }
+        
+        .chat-input button {
+          padding: 0.6rem 1rem;
+          background-color: #999;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: not-allowed;
+        }
+        
+        .info-chat {
+          font-size: 0.8rem;
+          color: #777;
+          margin-top: 0.5rem;
+          display: block;
+        }
+        
+        @media (max-width: 768px) {
+          .contato-flex {
+            flex-direction: column;
+          }
+        
+          .chatbox {
+            padding: 1rem;
+          }
+        }
+        
         
