@@ -334,54 +334,67 @@ header {
         }
         
         .produtopai h2 {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
+        }
+        
+        .produto-conteudo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 2rem;
+          align-items: flex-start;
+        }
+        
+        .produto-imagem img {
+          width: 100%;
+          max-width: 320px;
+          height: auto;
+          border-radius: 8px;
         }
         
         .produto-lista {
-          display: flex;
-          gap: 2rem;
-          justify-content: left;
-          flex-wrap: wrap;
+          flex: 1;
+          min-width: 260px;
         }
         
         .produto {
           background-color: white;
           padding: 1rem;
           border-radius: 10px;
-          width: 300px;
           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
           transition: transform 0.3s ease;
-          cursor: pointer;
+          /*cursor: pointer;*/
         }
-      
-        .produto:hover {
+        
+        /*.produto:hover {
           transform: scale(1.03);
-        }
-      
-        .produto img,
-        .produto h3 {
-        transition: transform 0.3s ease;
-      }
-      
-        .produto:hover img,
-        .produto:hover h3 {
-        transform: scale(1.05);
-        cursor: pointer;
-      }
+        }*/
         
-        .produto img {
-          width: 100%;
-          height: 220px;
-          object-fit: cover;
-          border-radius: 8px;
-          margin-bottom: 0.5rem;
+        .produto h2 {
+          font-size: 1.6rem;
+          margin: 0 0 0.5rem 0;
         }
         
-        .produto a {
+        .produto h4 {
+          margin: 0.5rem 0;
+          color: #555;
+        }
+        
+        .produto .btp {
+          display: inline-block;
+          margin-top: 1rem;
+          padding: 0.8rem 1.5rem;
+          background-color: #ffcc00;
+          color: #000;
           text-decoration: none;
-          color: inherit;
-          display: block;
+          font-weight: bold;
+          border-radius: 5px;
         }
+        
+        .produto .btp:hover {
+          background-color: #e6b800;
+        }
+        
         .estrelas {
           font-size: 1.2rem;
           color: #ccc;
@@ -390,7 +403,7 @@ header {
         .estrelas.preenchida {
           color: #f2b600;
         }
-
+        
         .estrelasunicas {
           font-size: 0.95rem;
           line-height: 1.6;
@@ -401,18 +414,37 @@ header {
           font-weight: bold;
           color: #333;
         }
-
+        
         .cod {
-        border: 3px solid gray;
-        background-color: grey;
-        border-radius: 8px;
-        margin-top: 0.5rem;
-        color: white;
-        font-size: 0.85rem;
-      }
-  
-  
-  
-
-
-  
+          border: 3px solid gray;
+          background-color: grey;
+          border-radius: 8px;
+          margin-left: 0.5rem;
+          padding: 0 0.5rem;
+          color: white;
+          font-size: 0.85rem;
+        }
+        
+        .desc,
+        .tec {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+          .produto-conteudo {
+            flex-direction: column;
+            align-items: center;
+          }
+        
+          .produto-imagem img {
+            max-width: 100%;
+          }
+        
+          .produto {
+            width: 100%;
+          }
+        }
+        
