@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pagina-carrinho">
+
+        <!-- Cabeçalho -->
+        <header>
+            <div class="container header-inner">
+              <div class="logo">
+                <img src="images_index/logobanner.png" alt="Logo" class="logo-img" />
+                <a href="index.html">Pintada Certa</a>
+              </div>
+              <nav class="menu">
+                <ul>
+                  <li><a href="index.html">Início</a></li>
+                  <li><a href="produtos.html">Produtos</a></li>
+                  <li><a href="#">Promoções</a></li>
+                  <li><a href="contato.html">Contato</a></li>
+                  <li>
+                    <a href="carrinho.html"><img src="images_index/carrinhodemao.png" alt="Carrinho" class="carrinho" /></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+
+                <!-- Barra de procura -->
+  <div class="barra-pesquisa-prods">
+    <div class="barra-pesquisa">
+      <input type="text" placeholder="O que procura na Pintada Certa?">
+      <button type="submit">🔍</button>
+    </div>
+  </div> 
+
+  <main>
+    <h1>Seu Carrinho</h1>
+
+    <div class="carrinho-container">
+      
+      <!-- CARRINHO -->
+      <div class="itens-carrinho">
+        
+        <div class="item">
+            <img src="images_list_prod/image copy.png" alt="Produto Exemplo">
+          <div class="item-info">
+            <h3>Tinta Acrílica Fosca Rende Muito Standard Interior e Exterior Branco 20 L Coral</h3>
+            <p>R$ 419,90</p>
+          </div>
+          <button class="remover-item" onclick="removerItem(this)">Remover</button>
+        </div>
+
+      </div>
+
+      <div class="total">
+        <p>Total: <strong>R$ 419,90</strong></p>
+        <a href="#" class="finalizar-btn">Finalizar Compra</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
