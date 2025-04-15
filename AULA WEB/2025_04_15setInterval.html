@@ -9,11 +9,11 @@
     <h1>Set Interval</h1>
     <p>A função set interval do navegador permite você cadastrar um intervalo de disparo, em que uma função será executado a cada passagem desse intervalo</p>
     <p>A função retorna m inteiro referente ao intervalo.</p>
-    <p id="date"></p>
+    <p id="data"></p>
     <script>
         pdata=document.getElementById("data");
 
-        setInterval(atualizaHora,1);
+        console.log(setInterval(atualizaHora,1));
 
         function atualizaHora(){
             d=new Date();
