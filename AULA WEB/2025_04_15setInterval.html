@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SET INTERVAL</title>
+  </head>
+  <body>
+    <h1>Set Interval</h1>
+    <p>A função set interval do navegador permite você cadastrar um intervalo de disparo, em que uma função será executado a cada passagem desse intervalo</p>
+    <p>A função retorna m inteiro referente ao intervalo.</p>
+    <p id="date"></p>
+    <script>
+        pdata=document.getElementById("data");
+
+        setInterval(atualizaHora,1);
+
+        function atualizaHora(){
+            d=new Date();
+
+            pdata.innerHTML=`${d.getDate()}/${d.getMonth()}/${d.getFullYear()} --`+` ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}:${d.getMilliseconds()}`
+        }
+
+    </script>
+  </body>
+  </html>
