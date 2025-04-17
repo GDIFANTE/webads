@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+    <script>
+        alert("Bem-vindo ao trabalho sobre JavaScript!");
+
+        console.log("Parabéns. Você achou o console!");
+
+        function exibirHoraAtual() {
+            const agora = new Date();
+            document.getElementById("horaatual").innerHTML = "Hora atual: " + agora.toLocaleTimeString();
+        }
+    </script>
+</head>
+<body onload="exibirHoraAtual()">
+    <h1 id="tituloprincipal">O que é JavaScript?</h1>
+    <p id="a">
+        O JavaScript foi criado em 1995 por Brendan Eich (na Netscape) com o objetivo de
+        tornar as páginas web dinâmicas. Antes dele, os sites eram estáticos, sem 
+        interatividade. A ideia era permitir que scripts rodassem diretamente no navegador,
+         manipulando elementos da página sem recarregar 
+         (ex.: validação de formulários, animações).
+    </p>
+    <p id="b">
+        A execução no navegador ocorre no computador do usuário, e é passível de manipulação
+        do DOM, HTML e CSS, além de ter APIs como <code>document</code> e <code>alert</code>.
+        No servidor ele apenas lida com requisições em uma máquina remota, sem acesso ao DOM
+        tem APIs de sistema.
+    </p>
+    <p id="c">
+        Sandbox é um ambiente isolado onde o JavaScript executa no navegador, com restrições
+        de segurança para evitar ações maliciosas. Ele não pode acessar o sistema de arquivos
+        do usuário ou fazer requisições a outros domínios sem permissão. É como uma caixa de 
+        areia que protege a máquina do usuário de códigos perigosos.
+    </p>
+    <p id="d">
+        Objetos globais <br>
+        * <code>document</code>: Representa o DOM e permite manipular elementos <br>
+        * <code>console</code>: Usado para DEPURAÇÃO, ou seja, exibição de mensagens no console
+        do navegador <br>
+        * <code>alert</code>: Exibe uma caixa de diálogo pop-up <br>
+        <br>
+        Estes são ferramentas essenciais para interagir com a página, registrar mensagens
+         e exibir alertas. São globais, não precisam ser declarados e só funcionam no
+         navegador.
+    </p>
+    <p id="horaatual"></p>
+</body>
+</html></p></body>
