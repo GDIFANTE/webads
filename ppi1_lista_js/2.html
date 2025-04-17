@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis e Operações</title>
+</head>
+<body>
+    <h1>Tipos de Variáveis e Operações</h1>
+    <button onclick="executarScript()">Executar Script</button>
+    <div>
+        <h2>Tipos de Variáveis</h2>
+        <p id="pstring"></p>
+        <p id="pnumero"></p>
+        <p id="pboolean"></p>
+        <p id="pundefined"></p>
+        <p id="pnull"></p>
+        <p id="pobject"></p>
+        <p id="parray"></p>
+    </div>
+    <div>
+        <h2>Operações entre Tipos</h2>
+        <p id="operacoes"></p>
+    </div>
+    <script>
+        function executarScript() {
+            let texto = "Sabonete sabor abacaxi";
+            let numero = 42;
+            let booleano = true;
+            let indefinido;
+            let nulo = null;
+            let objeto = { chave: "valor" };
+            let array = [1, 2, 3];
+
+            document.getElementById("pstring").innerText = `texto (string): ${typeof texto}`;
+            document.getElementById("pnumero").innerText = `numero (number): ${typeof numero}`;
+            document.getElementById("pboolean").innerText = `booleano (boolean): ${typeof booleano}`;
+            document.getElementById("pundefined").innerText = `indefinido (undefined): ${typeof indefinido}`;
+            document.getElementById("pnull").innerText = `nulo (object - peculiaridade do JavaScript): ${typeof nulo}`;
+            document.getElementById("pobject").innerText = `objeto (object): ${typeof objeto}`;
+            document.getElementById("parray").innerText = `array (object): ${typeof array}`;
+
+            let operacoes = [];
+            operacoes.push(`string + number: "Olá" + 42 = ${"Olá" + 42} (concatenação)`);
+            operacoes.push(`boolean * number: true * 2 = ${true * 2} (true é convertido para 1)`);
+            operacoes.push(`string * number: "5" * 2 = ${"5" * 2} (string é convertida para número)`);
+            operacoes.push(`null + number: null + 10 = ${null + 10} (null é convertido para 0)`);
+            operacoes.push(`undefined + number: undefined + 10 = ${undefined + 10} (resultado é NaN)`);
+
+            console.log("Operações entre tipos:");
+            operacoes.forEach(op => console.log(op));
+
+            document.getElementById("operacoes").innerText = operacoes.join("\n");
+        }
+    </script>
+</body>
+</html>
