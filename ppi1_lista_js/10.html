@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando Eventos em JavaScript</title>
+    </head>
+    <body>
+        <button id="alertButton">Clique aqui</button>
+        <br><br>
+        <input type="text" id="textInput" placeholder="Digite algo">
+        <br><br>
+        <div id="hoverDiv" style="width: 200px; height: 100px; border: 1px solid black;">Passe o mouse aqui</div>
+        <br><br>
+        <select id="colorSelect">
+            <option value="">Selecione uma cor</option>
+            <option value="red">Vermelho</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+        </select>
+
+        <script>
+            // a)
+            document.getElementById('alertButton').addEventListener('click', function() {
+                alert('Botão clicado!');
+            });
+        
+            // b)
+            document.getElementById('textInput').addEventListener('keydown', function(event) {
+                console.log(`Tecla pressionada: ${event.key}`);
+            });
+        
+            // c)
+            document.getElementById('textInput').addEventListener('focus', function() {
+                this.style.backgroundColor = 'yellow';
+            });
+        
+            // d)
+            document.getElementById('textInput').addEventListener('blur', function() {
+                this.style.backgroundColor = '';
+            });
+        
+            // e)
+            document.getElementById('hoverDiv').addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'lightgray';
+            });
+        
+            // f)
+            document.getElementById('hoverDiv').addEventListener('mouseout', function() {
+                this.style.backgroundColor = '';
+            });
+        
+            // g)
+            document.getElementById('colorSelect').addEventListener('change', function() {
+                document.body.style.backgroundColor = this.value;
+            });
+        </script>
+        
+    </body>
