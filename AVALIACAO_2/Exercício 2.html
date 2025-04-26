@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cronômetro JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .timer {
+      font-size: 3.5rem;
+      font-weight: bold;
+      font-family: monospace;
+    }
+    .container {
+      max-width: 500px;
+      margin-top: 80px;
+    }
+    .shortcuts {
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <h1 class="mb-3">Cronômetro</h1>
+    <div class="shortcuts mb-2">(Atalhos: 1 = iniciar, 2 = pausar, 3 = zerar)</div>
+    <div class="timer mb-4" id="display">00:00:00:00</div>
+
+    <div class="d-flex justify-content-center gap-2 mb-4">
+      <button class="btn btn-success" onclick="start()">Iniciar</button>
+      <button class="btn btn-warning" onclick="pause()">Pausar</button>
+      <button class="btn btn-danger" onclick="reset()">Zerar</button>
+    </div>
+
+    <div class="text-start">
+      <h5>Lista de Pausas:</h5>
+      <ul class="list-group" id="pause-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let pauseList = document.getElementById('pause-list');
+    let startTime = 0;
+    let elapsedTime = 0;
+    let interval;
+    let running = false;
+
+    function formatTime(ms) {
+      let totalMilliseconds = ms % 1000;
+      let totalSeconds = Math.floor(ms / 1000);
+      let seconds = totalSeconds % 60;
+      let minutes = Math.floor(totalSeconds / 60) % 60;
+      let hours = Math.floor(totalSeconds / 3600);
+      let centiseconds = Math.floor(totalMilliseconds / 10);
+      return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}:${pad(centiseconds)}`;
+    }
+
+    function pad(num) {
+      return num.toString().padStart(2, '0');
+    }
+
+    function updateDisplay() {
+      display.textContent = formatTime(elapsedTime);
+    }
+
+    function start() {
+      if (running) return;
+      running = true;
+      startTime = Date.now() - elapsedTime;
+      interval = setInterval(() => {
+        elapsedTime = Date.now() - startTime;
+        updateDisplay();
+      }, 10);
+    }
+
+    function pause() {
+      if (!running) return;
+      running = false;
+      clearInterval(interval);
+      const item = document.createElement('li');
+      item.className = "list-group-item";
+      item.textContent = `Pausado em ${formatTime(elapsedTime)}`;
+      pauseList.appendChild(item);
+    }
+
+    function reset() {
+      pause();
+      elapsedTime = 0;
+      updateDisplay();
+      pauseList.innerHTML = "";
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "1") start();
+      else if (e.key === "2") pause();
+      else if (e.key === "3") reset();
+    });
+
+    updateDisplay();
+  </script>
+</body>
+</html>
